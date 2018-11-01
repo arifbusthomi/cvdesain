@@ -8,6 +8,7 @@ namespace cvdesain
         // For more information on bundling, visit https://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
+            /*
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
 
@@ -25,6 +26,20 @@ namespace cvdesain
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+            */
+            bundles.Add(new StyleBundle("~/Content/css").Include(
+                      "~/Content/iconfonts/mdi/css/materialdesignicons.min.css",
+                      "~/Content/css/vendor.bundle.base.css",
+                      "~/Content/css/vendor.bundle.addons.css",
+                      "~/Content/css/style.css"));
+
+            bundles.Add(new ScriptBundle("~/Script/js").Include(
+                      "~/Content/vendors/js/vendor.bundle.base.js",
+                      "~/Content/vendors/js/vendor.bundle.addons.js",
+                      "~/Scripts/js/off-canvas.js",
+                      "~/Scripts/js/misc.js",
+                      "~/Scripts/js/dashboard.js"));
+
         }
     }
 }
