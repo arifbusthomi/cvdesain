@@ -3,17 +3,16 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
-    @Scripts.Render("~/Script/js")
-    @RenderSection("scripts", required: false)
+
 </head>
 <body>
     <div class="container-scroller">
         <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
             <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
-                <a class="navbar-brand brand-logo" href="index.html">
-                    <img src="images/logo.svg" alt="logo" />
+                <a class="navbar-brand brand-logo" href="index.html" style="color:cornflowerblue">
+                    Creative CV
                 </a>
                 <a class="navbar-brand brand-logo-mini" href="index.html">
                     <img src="images/logo-mini.svg" alt="logo" />
@@ -205,15 +204,15 @@
                                     <img src="images/faces/face1.jpg" alt="profile image">
                                 </div>
                                 <div class="text-wrapper">
-                                    <p class="profile-name">Richard V.Welsh</p>
+                                    <p class="profile-name">Arif Busthomi</p>
                                     <div>
-                                        <small class="designation text-muted">Manager</small>
+                                        <small class="designation text-muted">Premium</small>
                                         <span class="status-indicator online"></span>
                                     </div>
                                 </div>
                             </div>
                             <button class="btn btn-success btn-block">
-                                New Project
+                                Buat CV Baru
                                 <i class="mdi mdi-plus"></i>
                             </button>
                         </div>
@@ -224,27 +223,27 @@
                             <span class="menu-title">Dashboard</span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                            <i class="menu-icon mdi mdi-content-copy"></i>
-                            <span class="menu-title">Basic UI Elements</span>
-                            <i class="menu-arrow"></i>
-                        </a>
-                        <div class="collapse" id="ui-basic">
-                            <ul class="nav flex-column sub-menu">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="pages/ui-features/typography.html">Typography</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
+                    @*<li class="nav-item">
+                            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                                <i class="menu-icon mdi mdi-content-copy"></i>
+                                <span class="menu-title">Basic UI Elements</span>
+                                <i class="menu-arrow"></i>
+                            </a>
+                            <div class="collapse" id="ui-basic">
+                                <ul class="nav flex-column sub-menu">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="pages/ui-features/typography.html">Typography</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>*@
                     <li class="nav-item">
                         <a class="nav-link" href="pages/forms/basic_elements.html">
                             <i class="menu-icon mdi mdi-backup-restore"></i>
-                            <span class="menu-title">Form elements</span>
+                            <span class="menu-title">Formulir</span>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -295,25 +294,43 @@
             </nav>
 
             <!-- partial -->
-            
             <!-- body -->
-            @RenderBody()
-            <!-- body -->
+            <div class="main-panel">
+                @RenderBody()
+                <!-- body -->
+                <!-- footer -->
+                <footer class="footer">
+                    <div class="container-fluid clearfix">
+                        <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">
+                            Copyright © 2018
+                            <a href="http://www.bootstrapdash.com/" target="_blank">CV Desain</a>. All rights reserved.
+                        </span>
 
-            <!-- footer -->
-            <footer class="footer">
-                <div class="container-fluid clearfix">
-                    <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">
-                        Copyright © 2018
-                        <a href="http://www.bootstrapdash.com/" target="_blank">Bootstrapdash</a>. All rights reserved.
-                    </span>
-                    <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">
-                        Hand-crafted &amp; made with
-                        <i class="mdi mdi-heart text-danger"></i>
-                    </span>
-                </div>
-            </footer>
+                        <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">
+                            Hand-crafted &amp; made with
+                            <i class="mdi mdi-heart text-danger"></i>
+                            <div class="template-demo">
+                                <button type="button" class="btn social-btn btn-rounded btn-social-outline-facebook">
+                                    <i class="mdi mdi-facebook"></i>
+                                </button>
+                                <button type="button" class="btn social-btn btn-rounded btn-social-outline-twitter">
+                                    <i class="mdi mdi-twitter"></i>
+                                </button>
+                                <button type="button" class="btn social-btn btn-rounded btn-social-outline-dribbble">
+                                    <i class="mdi mdi-dribbble"></i>
+                                </button>
+                                <button type="button" class="btn social-btn btn-rounded btn-social-outline-linkedin">
+                                    <i class="mdi mdi-linkedin"></i>
+                                </button>
+                                <button type="button" class="btn social-btn btn-rounded btn-social-outline-google">
+                                    <i class="mdi mdi-google-plus"></i>
+                                </button>
+                            </div>
+                        </span>
 
+                    </div>
+                </footer>
+            </div>
         </div>
     </div>
 
@@ -337,7 +354,12 @@
             </div>
         </div>*@
 
-
-   
+    @Scripts.Render("~/Script/js")
+    @RenderSection("scripts", required: false)
+    <script src="~/Content/js/vendor.bundle.addons.js"></script>
+    <script src="~/Content/js/vendor.bundle.base.js"></script>
+    <script src="~/Scripts/dashboard.js"></script>
+    <script src="~/Scripts/off-canvas.js"></script>
+    <script src="~/Scripts/misc.js"></script>
 </body>
 </html>
