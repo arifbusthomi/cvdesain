@@ -6,10 +6,20 @@ using System.Web.Mvc;
 
 namespace cvdesain.Controllers
 {
-    public class LoginController : Controller
+    public class UserController : Controller
     {
-        // GET: Login
+        // GET: User
         public ActionResult Index()
+        {
+            return View();
+        }
+
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+        public ActionResult Register()
         {
             return View();
         }

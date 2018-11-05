@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace cvdesain.Models.Entity
+namespace cvdesain.Models
 {
     using System;
     using System.Data.Entity;

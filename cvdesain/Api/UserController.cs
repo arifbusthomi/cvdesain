@@ -1,4 +1,4 @@
-﻿using cvdesain.Models.Entity;
+﻿using cvdesain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +9,7 @@ using System.Web.Http.Description;
 
 namespace cvdesain.Api
 {
-    [RoutePrefix("api/User")]
+    [RoutePrefix("/api/User")]
     public class UserController : ApiController
     {
         cvdesainEntities dbContext = null;
@@ -45,6 +45,26 @@ namespace cvdesain.Api
             try
             {
                 users = dbContext.Tbl_User.ToList();
+            }
+            catch (Exception e)
+            {
+                users = null;
+            }
+            return users;
+        }
+
+        [ResponseType(typeof(Tbl_User))]
+        [HttpGet]
+        public List<Tbl_User> GetUsersByUsername(Tbl_User users)
+        {
+            var user = from cust in  
+                                       where cust.City == "London"
+                                       select cust;
+
+            List<Tbl_User> users = null;
+            try
+            {
+                users = dbContext.Tbl_User.;
             }
             catch (Exception e)
             {
