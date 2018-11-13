@@ -44,19 +44,19 @@ app.controller('UserCtrl', ['$scope', 'CrudServices',
             $scope.status = "";
         }
 
-        /*
+        
         $scope.GetUsers = function () {
-            var apiRoute = BaseUrl + 'GetUsers/';
+            var apiRoute = BaseUrl + 'GetUsersByUsername/';
             var user = CrudService.getall(apiRoute);
             user.then(function (response) {
                 debugger
-                $scope.studnets  = response.data;
+                var userByname  = response.data;
                 console.log(response.data);
             }, function (error) {
                 console.log("Error: " + error);
             });
         }
-        $scope.GetStudents();
-        */
+        $scope.GetUsers();
+        
     }]);
 

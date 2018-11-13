@@ -1,11 +1,14 @@
-﻿using cvdesain.Models;
+﻿using cvdesain.BL;
+using cvdesain.Models;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
+using System.Web.Security;
 
 namespace cvdesain.Api
 {
@@ -52,25 +55,28 @@ namespace cvdesain.Api
             }
             return users;
         }
-
-        [ResponseType(typeof(Tbl_User))]
+        
         [HttpGet]
-        public List<Tbl_User> GetUsersByUsername(Tbl_User users)
+        public List<mUser> GetUsersByUsername(mUser users)
         {
-            var user = from cust in  
-                                       where cust.City == "London"
-                                       select cust;
-
-            List<Tbl_User> users = null;
+            /*
+            BL_Users BL_users = new BL_Users();
+            DataTable dt = new DataTable();
+            dt = BL_users.GetUserByUsername(users.username, users.password);
+            List<DataRow> user = new List<DataRow>();
             try
             {
-                users = dbContext.Tbl_User.;
+                user = dt.AsEnumerable().ToList();
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                users = null;
+                user = null;
             }
-            return users;
+            */
+
+            cvdesainEntities cv = new cvdesainEntities();
+            //var user = cv.Tbl_User()
+            return user;
         }
     }
 }

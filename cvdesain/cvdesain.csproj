@@ -187,6 +187,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelEntities.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\mUser.cs" />
     <Compile Include="Models\Tbl_User.cs">
       <DependentUpon>ModelEntities.tt</DependentUpon>
     </Compile>
@@ -2190,6 +2191,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\cvdesain.BL\cvdesain.BL.csproj">
+      <Project>{2F471403-22C6-4651-9154-4714EB01CA68}</Project>
+      <Name>cvdesain.BL</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
