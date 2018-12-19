@@ -57,7 +57,7 @@ namespace cvdesain.Api
         }
         
         [HttpGet]
-        public List<mUser> GetUsersByUsername(mUser users)
+        public string GetUsersByUsername(mUser users)
         {
             /*
             BL_Users BL_users = new BL_Users();
@@ -75,8 +75,8 @@ namespace cvdesain.Api
             */
 
             cvdesainEntities cv = new cvdesainEntities();
-            //var user = cv.Tbl_User()
-            return user;
+            var user = dbContext.Tbl_User.Where(x => x.Username == users.username).SingleOrDefault();
+            return user.ToString();
         }
     }
 }

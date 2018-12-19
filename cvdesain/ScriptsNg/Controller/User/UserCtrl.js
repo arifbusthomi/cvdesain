@@ -1,6 +1,7 @@
 ﻿
 app.controller('UserCtrl', ['$scope', 'CrudServices',
     function ($scope, CrudService) {
+        debugger
         var BaseUrl = '/Api/User/';
         $scope.btnText = "Register";
         $scope.userID = 0;
